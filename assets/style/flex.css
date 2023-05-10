@@ -1,3 +1,5 @@
+/* seção do cabeçalho */
+
 .menu {
     display: flex;
     justify-content: space-evenly;  /* space-evenly: aplica espaçamento horizontal entre todos os elementos, aumentando conforme o tamanho da tela aumenta */
@@ -6,13 +8,99 @@
     column-gap: 33px;
 }
 
+/* seção de categorias */
+.categorias__lista {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+}
+
+/* seção de destaques */
+.destaques {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.destaques__barra {
+    flex-grow: 1;
+}
+
+/* seção de eventos */
+.eventos__lista {
+  display: flex;  
+  flex-wrap: wrap;
+  column-gap: 1.6rem;
+  row-gap: 1rem;
+  justify-content: center;
+}
+
+.eventos__item {
+  flex-grow: 1;  
+  max-width: 400px;
+}
+
+
+/* seção agenda */
+
+.agenda__lista {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
+    justify-content: center;
+}
+
+.agenda__item {
+    flex-grow: 1;
+}
+
+/* seção de rodapé  */
+
+.rodape {
+   display: flex;   /* os elementos ficam dispostos lado a lado  */
+    flex-wrap: wrap;  /* faz a quebra de linha, conforme o limite da tela */
+    justify-content: space-between;  /* espaçamento entre os itens(elementos) */
+}
+
+.rodape__logo {
+    align-self: end;
+
+}
+
+
 @media (min-width:720px) {
+
+    /* seção do cabeçalho */
     .menu {
         column-gap: 75px;
     }
+
+
+/* seção de categorias */
+.categorias__lista {
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 1rem;
 }
 
+/* seção de eventos */
+.eventos__lista {
+    justify-content: end;
+  }
+
+
+/* seção agenda */
+
+.agenda__lista {
+    justify-content: end;
+}
+}
+
+
 @media (min-width: 1140px){
+
+    /* seção do cabeçalho */
 .menu {
     column-gap: 110px;
     flex-wrap: nowrap;
